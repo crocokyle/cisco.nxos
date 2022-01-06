@@ -396,7 +396,7 @@ class Interfaces(FactsBase):
                 facts[key] = intf
             else:
                 intf["state"] = self.parse_state(key, value)
-                intf["description"] = self.parse_description(value)
+                intf["description"] = "legacy_" + self.parse_description(value)
                 intf["macaddress"] = self.parse_macaddress(value)
                 intf["mode"] = self.parse_mode(value)
                 intf["mtu"] = self.parse_mtu(value)
