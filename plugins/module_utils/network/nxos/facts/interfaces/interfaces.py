@@ -95,7 +95,7 @@ class InterfacesFacts(object):
         intf = match.group(1)
         if get_interface_type(intf) == "unknown":
             return {}
-        config["name"] = intf
+        config["name"] = "current_" + intf
         config["description"] = utils.parse_conf_arg(conf, "description")
         config["speed"] = utils.parse_conf_arg(conf, "speed")
         config["mtu"] = utils.parse_conf_arg(conf, "mtu")
